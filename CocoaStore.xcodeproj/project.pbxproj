@@ -19,6 +19,7 @@
 		570FA4EF2BD83E9A00294392 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		570FA4F12BD83E9C00294392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = CocoaStoreStoreKitConfiguration.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 			children = (
 				570FA4ED2BD83E9A00294392 /* CocoaStoreApp.swift */,
 				570FA4EF2BD83E9A00294392 /* MainView.swift */,
+				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
 				570FA4F12BD83E9C00294392 /* Assets.xcassets */,
 				570FA4F32BD83E9C00294392 /* Preview Content */,
 			);
