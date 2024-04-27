@@ -24,9 +24,11 @@ struct StoreView: View {
           Label("Subscriptions (Non-Renewing)", systemImage: "ticket")
         }
         Section {
-          Text("Profile Pic Decoration")
+          NavigationLink("Profile Pic Decoration") {
+            ConsumablesStoreView()
+          }
         } header: {
-          Label("Consumables", systemImage: "ticket")
+          Label("Consumables", systemImage: "carrot")
         }
       }
       .navigationTitle("CocoaStore")

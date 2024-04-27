@@ -15,6 +15,7 @@
 		57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */; };
 		57B60D012BDD327A00294392 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D002BDD327A00294392 /* ProfileView.swift */; };
 		57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */; };
+		57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D062BDD427700294392 /* ConsumablesStoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveOnStageView.swift; sourceTree = "<group>"; };
 		57B60D002BDD327A00294392 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRenewableSubscriptionStoreView.swift; sourceTree = "<group>"; };
+		57B60D062BDD427700294392 /* ConsumablesStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumablesStoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				57B60CFA2BDD30BC00294392 /* StoreView.swift */,
 				57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */,
+				57B60D062BDD427700294392 /* ConsumablesStoreView.swift */,
 			);
 			path = StoreViews;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */,
+				57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */,
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
 				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
 				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
