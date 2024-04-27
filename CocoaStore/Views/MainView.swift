@@ -15,6 +15,11 @@ struct MainView: View {
         .tabItem {
           Label("Store", systemImage: "storefront")
         }
+      LiveOnStageView()
+        .tag("live")
+        .tabItem {
+          Label("Live", systemImage: "record.circle")
+        }
     }
   }
 }
