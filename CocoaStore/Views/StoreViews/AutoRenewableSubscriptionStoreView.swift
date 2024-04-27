@@ -5,11 +5,17 @@
 //  Created by Jan Armbrust on 27.04.24.
 //
 
+import StoreKit
 import SwiftUI
 
 struct AutoRenewableSubscriptionStoreView: View {
+  @State private var subscriptionGroupID = "EC985ED4"
+
   var body: some View {
-    Text("AutoRenewableSubscriptionStoreView")
+    ScrollView {
+      SubscriptionStoreView(groupID: subscriptionGroupID)
+        .storeButton(.hidden, for: .cancellation)
+    }
   }
 }
 
