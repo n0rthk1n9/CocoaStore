@@ -20,6 +20,11 @@ struct MainView: View {
         .tabItem {
           Label("Live", systemImage: "record.circle")
         }
+      ProfileView()
+        .tag("profile")
+        .tabItem {
+          Label("Profile", systemImage: "person.crop.circle")
+        }
     }
   }
 }

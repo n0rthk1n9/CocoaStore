@@ -13,6 +13,7 @@
 		570FA4F52BD83E9C00294392 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */; };
 		57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFA2BDD30BC00294392 /* StoreView.swift */; };
 		57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */; };
+		57B60D012BDD327A00294392 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D002BDD327A00294392 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = CocoaStoreStoreKitConfiguration.storekit; sourceTree = "<group>"; };
 		57B60CFA2BDD30BC00294392 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveOnStageView.swift; sourceTree = "<group>"; };
+		57B60D002BDD327A00294392 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				570FA4EF2BD83E9A00294392 /* MainView.swift */,
 				57B60CFA2BDD30BC00294392 /* StoreView.swift */,
 				57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */,
+				57B60D002BDD327A00294392 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */,
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
+				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
 				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
 				570FA4EE2BD83E9A00294392 /* CocoaStoreApp.swift in Sources */,
 			);
