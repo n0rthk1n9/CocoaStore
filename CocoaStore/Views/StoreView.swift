@@ -5,41 +5,29 @@
 //  Created by Jan Armbrust on 27.04.24.
 //
 
-import StoreKit
 import SwiftUI
 
 struct StoreView: View {
-  @State private var subscriptions: [Product]?
-
-  var sortedSubscriptions: [Product] {
-    subscriptions?.sorted { $0.price < $1.price } ?? []
-  }
-
   var body: some View {
-    List {
-      ForEach(sortedSubscriptions) { subscription in
-        HStack(alignment: .top) {
-          Text("🎫")
-          VStack(alignment: .leading) {
-            HStack {
-              Text(subscription.displayName)
-                .font(.title3)
-                .fontWeight(.bold)
-              Spacer()
-              Text(subscription.displayPrice)
-            }
-            Text(subscription.description)
-              .font(.caption)
-          }
+    NavigationStack {
+      List {
+        Section {
+          Text("CocoaHeads Meetup Tickets Subscriptions")
+        } header: {
+          Label("Subscriptions (Auto-Renewable)", systemImage: "ticket")
+        }
+        Section {
+          Text("Subscriptions (Non-Renewing")
+        } header: {
+          Label("Subscriptions (Non-Renewing)", systemImage: "ticket")
+        }
+        Section {
+          Text("Profile Pic Decoration")
+        } header: {
+          Label("Consumables", systemImage: "ticket")
         }
       }
-    }
-    .task {
-      subscriptions = try? await Product.products(for: [
-        "dev.xbow.CocoaStore.ticketsGold",
-        "dev.xbow.CocoaStore.ticketsSilver",
-        "dev.xbow.CocoaStore.ticketsBronze"
-      ])
+      .navigationTitle("CocoaStore")
     }
   }
 }
