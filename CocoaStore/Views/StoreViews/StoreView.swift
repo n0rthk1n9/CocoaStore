@@ -12,12 +12,14 @@ struct StoreView: View {
     NavigationStack {
       List {
         Section {
-          Text("CocoaHeads Meetup Tickets Subscriptions")
+          NavigationLink("CocoaHeads Meetup Tickets Subscriptions") {
+            AutoRenewableSubscriptionStoreView()
+          }
         } header: {
           Label("Subscriptions (Auto-Renewable)", systemImage: "ticket")
         }
         Section {
-          Text("Subscriptions (Non-Renewing")
+          Text("Subscriptions (Non-Renewing)")
         } header: {
           Label("Subscriptions (Non-Renewing)", systemImage: "ticket")
         }
