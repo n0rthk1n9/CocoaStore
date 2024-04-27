@@ -80,8 +80,8 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "",
-              "displayName" : "",
+              "description" : "Get free access to every Meetup in Germany",
+              "displayName" : "Meetup Tickets Bronze",
               "locale" : "en_US"
             }
           ],
@@ -105,8 +105,8 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "",
-              "displayName" : "",
+              "description" : "Get free access to every Meetup continentwide",
+              "displayName" : "Meetup Tickets Silver",
               "locale" : "en_US"
             }
           ],
@@ -123,15 +123,15 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "0.99",
+          "displayPrice" : "14.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "C0B90A9A",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "",
-              "displayName" : "",
+              "description" : "Get free access to every Meetup worldwide",
+              "displayName" : "Meetup Tickets Gold",
               "locale" : "en_US"
             }
           ],
