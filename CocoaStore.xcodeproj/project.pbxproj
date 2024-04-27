@@ -60,7 +60,7 @@
 			children = (
 				570FA4ED2BD83E9A00294392 /* CocoaStoreApp.swift */,
 				57B60CFD2BDD30CA00294392 /* Views */,
-				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
+				57B60D022BDD386700294392 /* Store */,
 				570FA4F12BD83E9C00294392 /* Assets.xcassets */,
 				570FA4F32BD83E9C00294392 /* Preview Content */,
 			);
@@ -84,6 +84,14 @@
 				57B60D002BDD327A00294392 /* ProfileView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		57B60D022BDD386700294392 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -51,7 +51,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../../CocoaStore/CocoaStoreStoreKitConfiguration.storekit">
+         identifier = "../../CocoaStore/Store/CocoaStoreStoreKitConfiguration.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction

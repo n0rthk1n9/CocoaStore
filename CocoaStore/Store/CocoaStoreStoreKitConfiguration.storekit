@@ -4,7 +4,36 @@
 
   ],
   "products" : [
-
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "39F158CF",
+      "localizations" : [
+        {
+          "description" : "Decorate your profile pic with a ❤️ emoji",
+          "displayName" : "A heart emoji",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "dev.xbow.CocoaStore.profileHeartEmoji",
+      "referenceName" : "Profile Heart Emoji",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "9BBB473B",
+      "localizations" : [
+        {
+          "description" : "Decorate your profile pic with a ☀️ emoji",
+          "displayName" : "A sun emoji",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "dev.xbow.CocoaStore.profileSunEmoji",
+      "referenceName" : "Profile Sun Emoji",
+      "type" : "Consumable"
+    }
   ],
   "settings" : {
     "_failTransactionsEnabled" : false,
