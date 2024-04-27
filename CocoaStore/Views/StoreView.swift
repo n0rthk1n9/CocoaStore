@@ -1,14 +1,14 @@
 //
-//  MainView.swift
+//  StoreView.swift
 //  CocoaStore
 //
-//  Created by Jan Armbrust on 23.04.24.
+//  Created by Jan Armbrust on 27.04.24.
 //
 
 import StoreKit
 import SwiftUI
 
-struct MainView: View {
+struct StoreView: View {
   @State private var subscriptions: [Product]?
 
   var sortedSubscriptions: [Product] {
@@ -45,5 +45,5 @@ struct MainView: View {
 }
 
 #Preview {
-  MainView()
+  StoreView()
 }

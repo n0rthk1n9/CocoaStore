@@ -11,6 +11,7 @@
 		570FA4F02BD83E9A00294392 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570FA4EF2BD83E9A00294392 /* MainView.swift */; };
 		570FA4F22BD83E9C00294392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570FA4F12BD83E9C00294392 /* Assets.xcassets */; };
 		570FA4F52BD83E9C00294392 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */; };
+		57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFA2BDD30BC00294392 /* StoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		570FA4F12BD83E9C00294392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = CocoaStoreStoreKitConfiguration.storekit; sourceTree = "<group>"; };
+		57B60CFA2BDD30BC00294392 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				570FA4ED2BD83E9A00294392 /* CocoaStoreApp.swift */,
-				570FA4EF2BD83E9A00294392 /* MainView.swift */,
+				57B60CFD2BDD30CA00294392 /* Views */,
 				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
 				570FA4F12BD83E9C00294392 /* Assets.xcassets */,
 				570FA4F32BD83E9C00294392 /* Preview Content */,
@@ -67,6 +69,15 @@
 				570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57B60CFD2BDD30CA00294392 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				570FA4EF2BD83E9A00294392 /* MainView.swift */,
+				57B60CFA2BDD30BC00294392 /* StoreView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
+				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
 				570FA4EE2BD83E9A00294392 /* CocoaStoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
