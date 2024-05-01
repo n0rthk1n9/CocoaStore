@@ -16,6 +16,7 @@
 		57B60D012BDD327A00294392 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D002BDD327A00294392 /* ProfileView.swift */; };
 		57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */; };
 		57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D062BDD427700294392 /* ConsumablesStoreView.swift */; };
+		57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB42BE274D800294392 /* PurchaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		57B60D002BDD327A00294392 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRenewableSubscriptionStoreView.swift; sourceTree = "<group>"; };
 		57B60D062BDD427700294392 /* ConsumablesStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumablesStoreView.swift; sourceTree = "<group>"; };
+		57DFDBB42BE274D800294392 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
+				57DFDBB42BE274D800294392 /* PurchaseManager.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
 				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
 				57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */,
+				57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */,
 				570FA4EE2BD83E9A00294392 /* CocoaStoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
