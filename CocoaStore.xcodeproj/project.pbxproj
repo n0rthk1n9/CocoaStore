@@ -19,6 +19,9 @@
 		57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB42BE274D800294392 /* PurchaseManager.swift */; };
 		57DFDBB72BE2759300294392 /* CocoaStoreViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */; };
 		57DFDBBA2BE275E500294392 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB92BE275E500294392 /* View+Extension.swift */; };
+		57DFDBBD2BE2772D00294392 /* SubscriptionID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBBC2BE2772D00294392 /* SubscriptionID.swift */; };
+		57DFDBBF2BE277CA00294392 /* SubscriptionGroupID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBBE2BE277CA00294392 /* SubscriptionGroupID.swift */; };
+		57DFDBC12BE2782C00294392 /* ProductID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBC02BE2782C00294392 /* ProductID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		57DFDBB42BE274D800294392 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaStoreViewModifier.swift; sourceTree = "<group>"; };
 		57DFDBB92BE275E500294392 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		57DFDBBC2BE2772D00294392 /* SubscriptionID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionID.swift; sourceTree = "<group>"; };
+		57DFDBBE2BE277CA00294392 /* SubscriptionGroupID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionGroupID.swift; sourceTree = "<group>"; };
+		57DFDBC02BE2782C00294392 /* ProductID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,8 @@
 			children = (
 				570FA4ED2BD83E9A00294392 /* CocoaStoreApp.swift */,
 				57B60CFD2BDD30CA00294392 /* Views */,
-				57DFDBB82BE275D100294392 /* Extension */,
+				57DFDBBB2BE2770400294392 /* Models */,
+				57DFDBB82BE275D100294392 /* Extensions */,
 				57B60D022BDD386700294392 /* Store */,
 				570FA4F12BD83E9C00294392 /* Assets.xcassets */,
 				570FA4F32BD83E9C00294392 /* Preview Content */,
@@ -117,12 +124,22 @@
 			path = StoreViews;
 			sourceTree = "<group>";
 		};
-		57DFDBB82BE275D100294392 /* Extension */ = {
+		57DFDBB82BE275D100294392 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				57DFDBB92BE275E500294392 /* View+Extension.swift */,
 			);
-			path = Extension;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57DFDBBB2BE2770400294392 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57DFDBBC2BE2772D00294392 /* SubscriptionID.swift */,
+				57DFDBBE2BE277CA00294392 /* SubscriptionGroupID.swift */,
+				57DFDBC02BE2782C00294392 /* ProductID.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,11 +215,14 @@
 				57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */,
 				57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */,
 				57DFDBBA2BE275E500294392 /* View+Extension.swift in Sources */,
+				57DFDBBF2BE277CA00294392 /* SubscriptionGroupID.swift in Sources */,
+				57DFDBBD2BE2772D00294392 /* SubscriptionID.swift in Sources */,
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
 				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
 				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
 				57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */,
 				57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */,
+				57DFDBC12BE2782C00294392 /* ProductID.swift in Sources */,
 				570FA4EE2BD83E9A00294392 /* CocoaStoreApp.swift in Sources */,
 				57DFDBB72BE2759300294392 /* CocoaStoreViewModifier.swift in Sources */,
 			);

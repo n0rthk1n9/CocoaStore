@@ -56,7 +56,7 @@ class PurchaseManager: ObservableObject {
 
   func refreshPurchasedProducts() async {
     for await verificationResult in Transaction.currentEntitlements {
-      print("verificationResult.unsafePayloadValue.productID")
+      print("\(verificationResult.unsafePayloadValue.productID)")
       switch verificationResult {
       case .verified:
         Task {
