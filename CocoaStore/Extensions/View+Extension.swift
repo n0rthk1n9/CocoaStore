@@ -11,4 +11,8 @@ extension View {
   func cocoaStore() -> some View {
     modifier(CocoaStoreViewModifier())
   }
+
+  func subscriptionPassStatusTask() -> some View {
+    modifier(SubscriptionStatusTaskViewModifier())
+  }
 }

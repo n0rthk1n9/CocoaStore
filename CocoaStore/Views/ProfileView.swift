@@ -9,17 +9,19 @@ import SwiftUI
 
 struct ProfileView: View {
   @ObservedObject private var purchaseManager = PurchaseManager.shared
+  @Environment(\.subscriptionStatus) private var subscriptionStatus
+  @Environment(\.subscriptionStatusIsLoading) private var subscriptionStatusIsLoading
 
   var body: some View {
-    switch purchaseManager.activeSubscription {
-    case .ticketsBronze:
-      Text("ticketsBronze")
-    case .ticketsSilver:
-      Text("ticketsSilver")
-    case .ticketsGold:
-      Text("ticketsGold")
-    case .none:
-      Text("No subscription")
+    if subscriptionStatusIsLoading {
+      ProgressView()
+    } else {
+      switch subscriptionStatus {
+      case .notSubscribed: Text("Not Subscribed")
+      case .ticketsBronze: Text("ticketsBronze")
+      case .ticketsSilver: Text("ticketsSilver")
+      case .ticketsGold: Text("ticketsGold")
+      }
     }
   }
 }

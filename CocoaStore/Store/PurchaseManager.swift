@@ -8,7 +8,7 @@
 import StoreKit
 
 class PurchaseManager: ObservableObject {
-  @Published var activeSubscription: SubscriptionID = .none
+//  @Published var activeSubscription: SubscriptionID = .none
 
   private var updatesTask: Task<Void, Never>?
 
@@ -16,10 +16,10 @@ class PurchaseManager: ObservableObject {
 
   private init() {}
 
-  @MainActor
-  private func setActiveSubscription(subscription: SubscriptionID) {
-    activeSubscription = subscription
-  }
+//  @MainActor
+//  private func setActiveSubscription(subscription: SubscriptionID) {
+//    activeSubscription = subscription
+//  }
 
   func process(transaction verificationResult: VerificationResult<Transaction>) async {
     let transaction: Transaction
@@ -27,19 +27,40 @@ class PurchaseManager: ObservableObject {
     switch verificationResult {
     case let .verified(trans):
       transaction = trans
-      if let subscriptionID = SubscriptionID.from(rawValue: trans.productID) {
-        Task {
-          await setActiveSubscription(subscription: subscriptionID)
-        }
-        print("\(activeSubscription.rawValue)")
-      } else {
-        print("Invalid product ID: \(trans.productID)")
-      }
     case .unverified:
       return
     }
 
     await transaction.finish()
+  }
+
+  func status(for statuses: [Product.SubscriptionInfo.Status],
+              ids: SubscriptionIdentifiers) -> SubscriptionStatus
+  {
+    let effectiveStatus = statuses.max { lhs, rhs in
+      let lhsStatus = SubscriptionStatus(
+        productID: lhs.transaction.unsafePayloadValue.productID,
+        ids: ids
+      ) ?? .notSubscribed
+      let rhsStatus = SubscriptionStatus(
+        productID: rhs.transaction.unsafePayloadValue.productID,
+        ids: ids
+      ) ?? .notSubscribed
+      return lhsStatus < rhsStatus
+    }
+    guard let effectiveStatus else {
+      return .notSubscribed
+    }
+
+    let transaction: Transaction
+    switch effectiveStatus.transaction {
+    case let .verified(trans):
+      transaction = trans
+    case .unverified:
+      return .notSubscribed
+    }
+
+    return SubscriptionStatus(productID: transaction.productID, ids: ids) ?? .notSubscribed
   }
 
   func checkForUnfinishedTransactions() async {
@@ -64,14 +85,7 @@ class PurchaseManager: ObservableObject {
       print("\(verificationResult.unsafePayloadValue.productID)")
       switch verificationResult {
       case let .verified(payload):
-        if let subscriptionID = SubscriptionID.from(rawValue: payload.productID) {
-          Task {
-            await setActiveSubscription(subscription: subscriptionID)
-          }
-          print("\(activeSubscription.rawValue)")
-        } else {
-          print("Invalid product ID: \(payload.productID)")
-        }
+        print(payload)
       case .unverified:
         return
       }

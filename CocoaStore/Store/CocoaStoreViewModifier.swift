@@ -12,6 +12,7 @@ struct CocoaStoreViewModifier: ViewModifier {
     ZStack {
       content
     }
+    .subscriptionPassStatusTask()
     .task {
       PurchaseManager.shared.observeTransactionUpdates()
       await PurchaseManager.shared.checkForUnfinishedTransactions()

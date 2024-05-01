@@ -11,6 +11,10 @@
 		570FA4F02BD83E9A00294392 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570FA4EF2BD83E9A00294392 /* MainView.swift */; };
 		570FA4F22BD83E9C00294392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570FA4F12BD83E9C00294392 /* Assets.xcassets */; };
 		570FA4F52BD83E9C00294392 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */; };
+		5789B2242BE2E17100294392 /* SubscriptionIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2232BE2E17100294392 /* SubscriptionIdentifiers.swift */; };
+		5789B2262BE2E28700294392 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2252BE2E28700294392 /* EnvironmentValues+Extension.swift */; };
+		5789B2282BE2E2C000294392 /* SubscriptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */; };
+		5789B22A2BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2292BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift */; };
 		57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFA2BDD30BC00294392 /* StoreView.swift */; };
 		57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */; };
 		57B60D012BDD327A00294392 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D002BDD327A00294392 /* ProfileView.swift */; };
@@ -19,8 +23,6 @@
 		57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB42BE274D800294392 /* PurchaseManager.swift */; };
 		57DFDBB72BE2759300294392 /* CocoaStoreViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */; };
 		57DFDBBA2BE275E500294392 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB92BE275E500294392 /* View+Extension.swift */; };
-		57DFDBBD2BE2772D00294392 /* SubscriptionID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBBC2BE2772D00294392 /* SubscriptionID.swift */; };
-		57DFDBBF2BE277CA00294392 /* SubscriptionGroupID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBBE2BE277CA00294392 /* SubscriptionGroupID.swift */; };
 		57DFDBC12BE2782C00294392 /* ProductID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBC02BE2782C00294392 /* ProductID.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		570FA4F12BD83E9C00294392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		570FA4F42BD83E9C00294392 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = CocoaStoreStoreKitConfiguration.storekit; sourceTree = "<group>"; };
+		5789B2232BE2E17100294392 /* SubscriptionIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionIdentifiers.swift; sourceTree = "<group>"; };
+		5789B2252BE2E28700294392 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
+		5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStatus.swift; sourceTree = "<group>"; };
+		5789B2292BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStatusTaskViewModifier.swift; sourceTree = "<group>"; };
 		57B60CFA2BDD30BC00294392 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveOnStageView.swift; sourceTree = "<group>"; };
 		57B60D002BDD327A00294392 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -39,8 +45,6 @@
 		57DFDBB42BE274D800294392 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaStoreViewModifier.swift; sourceTree = "<group>"; };
 		57DFDBB92BE275E500294392 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		57DFDBBC2BE2772D00294392 /* SubscriptionID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionID.swift; sourceTree = "<group>"; };
-		57DFDBBE2BE277CA00294392 /* SubscriptionGroupID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionGroupID.swift; sourceTree = "<group>"; };
 		57DFDBC02BE2782C00294392 /* ProductID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,8 @@
 				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
 				57DFDBB42BE274D800294392 /* PurchaseManager.swift */,
 				57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */,
+				5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */,
+				5789B2292BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				57DFDBB92BE275E500294392 /* View+Extension.swift */,
+				5789B2252BE2E28700294392 /* EnvironmentValues+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,9 +142,8 @@
 		57DFDBBB2BE2770400294392 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				57DFDBBC2BE2772D00294392 /* SubscriptionID.swift */,
-				57DFDBBE2BE277CA00294392 /* SubscriptionGroupID.swift */,
 				57DFDBC02BE2782C00294392 /* ProductID.swift */,
+				5789B2232BE2E17100294392 /* SubscriptionIdentifiers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,15 +219,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */,
+				5789B2242BE2E17100294392 /* SubscriptionIdentifiers.swift in Sources */,
 				57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */,
 				57DFDBBA2BE275E500294392 /* View+Extension.swift in Sources */,
-				57DFDBBF2BE277CA00294392 /* SubscriptionGroupID.swift in Sources */,
-				57DFDBBD2BE2772D00294392 /* SubscriptionID.swift in Sources */,
+				5789B22A2BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift in Sources */,
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
 				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
 				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
+				5789B2262BE2E28700294392 /* EnvironmentValues+Extension.swift in Sources */,
 				57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */,
 				57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */,
+				5789B2282BE2E2C000294392 /* SubscriptionStatus.swift in Sources */,
 				57DFDBC12BE2782C00294392 /* ProductID.swift in Sources */,
 				570FA4EE2BD83E9A00294392 /* CocoaStoreApp.swift in Sources */,
 				57DFDBB72BE2759300294392 /* CocoaStoreViewModifier.swift in Sources */,
