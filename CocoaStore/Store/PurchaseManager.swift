@@ -8,7 +8,7 @@
 import StoreKit
 
 class PurchaseManager: ObservableObject {
-  @Published var isShareAndSaveCustomer = false
+  @Published var activeSubscription: SubscriptionID = .none
 
   private var updatesTask: Task<Void, Never>?
 
@@ -17,8 +17,8 @@ class PurchaseManager: ObservableObject {
   private init() {}
 
   @MainActor
-  private func setIsShareAndSaveCustomer() {
-    isShareAndSaveCustomer.toggle()
+  private func setActiveSubscription(subscription: SubscriptionID) {
+    activeSubscription = subscription
   }
 
   func process(transaction verificationResult: VerificationResult<Transaction>) async {
@@ -27,8 +27,13 @@ class PurchaseManager: ObservableObject {
     switch verificationResult {
     case let .verified(trans):
       transaction = trans
-      Task {
-        await setIsShareAndSaveCustomer()
+      if let subscriptionID = SubscriptionID.from(rawValue: trans.productID) {
+        Task {
+          await setActiveSubscription(subscription: subscriptionID)
+        }
+        print("\(activeSubscription.rawValue)")
+      } else {
+        print("Invalid product ID: \(trans.productID)")
       }
     case .unverified:
       return
@@ -58,9 +63,14 @@ class PurchaseManager: ObservableObject {
     for await verificationResult in Transaction.currentEntitlements {
       print("\(verificationResult.unsafePayloadValue.productID)")
       switch verificationResult {
-      case .verified:
-        Task {
-          await setIsShareAndSaveCustomer()
+      case let .verified(payload):
+        if let subscriptionID = SubscriptionID.from(rawValue: payload.productID) {
+          Task {
+            await setActiveSubscription(subscription: subscriptionID)
+          }
+          print("\(activeSubscription.rawValue)")
+        } else {
+          print("Invalid product ID: \(payload.productID)")
         }
       case .unverified:
         return

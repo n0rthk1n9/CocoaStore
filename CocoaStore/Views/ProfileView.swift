@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ProfileView: View {
+  @ObservedObject private var purchaseManager = PurchaseManager.shared
+
   var body: some View {
-    Text("ProfileView")
+    switch purchaseManager.activeSubscription {
+    case .ticketsBronze:
+      Text("ticketsBronze")
+    case .ticketsSilver:
+      Text("ticketsSilver")
+    case .ticketsGold:
+      Text("ticketsGold")
+    case .none:
+      Text("No subscription")
+    }
   }
 }
 
