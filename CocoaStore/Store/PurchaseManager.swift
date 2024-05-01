@@ -8,18 +8,14 @@
 import StoreKit
 
 class PurchaseManager: ObservableObject {
-//  @Published var activeSubscription: SubscriptionID = .none
+  @Published var profileHeartEmojiQuantity = 0
+  @Published var profileSunEmojiQuantity = 0
 
   private var updatesTask: Task<Void, Never>?
 
   static let shared = PurchaseManager()
 
   private init() {}
-
-//  @MainActor
-//  private func setActiveSubscription(subscription: SubscriptionID) {
-//    activeSubscription = subscription
-//  }
 
   func process(transaction verificationResult: VerificationResult<Transaction>) async {
     let transaction: Transaction
@@ -31,7 +27,34 @@ class PurchaseManager: ObservableObject {
       return
     }
 
-    await transaction.finish()
+    if case .consumable = transaction.productType {
+      if transaction.revocationDate == nil, transaction.revocationReason == nil {
+        switch transaction.productID {
+        case ProductID.profileHeartEmoji.rawValue:
+          Task { @MainActor in
+            profileHeartEmojiQuantity += transaction.purchasedQuantity
+          }
+        case ProductID.profileSunEmoji.rawValue:
+          Task { @MainActor in
+            profileSunEmojiQuantity += transaction.purchasedQuantity
+          }
+        default:
+          return
+        }
+        await transaction.finish()
+      } else {
+        switch transaction.productID {
+        case ProductID.profileHeartEmoji.rawValue:
+          profileHeartEmojiQuantity -= transaction.purchasedQuantity
+        case ProductID.profileSunEmoji.rawValue:
+          profileSunEmojiQuantity -= transaction.purchasedQuantity
+        default:
+          return
+        }
+      }
+    } else {
+      await transaction.finish()
+    }
   }
 
   func status(for statuses: [Product.SubscriptionInfo.Status],
@@ -80,15 +103,14 @@ class PurchaseManager: ObservableObject {
     }
   }
 
-  func refreshPurchasedProducts() async {
-    for await verificationResult in Transaction.currentEntitlements {
-      print("\(verificationResult.unsafePayloadValue.productID)")
-      switch verificationResult {
-      case let .verified(payload):
-        print(payload)
-      case .unverified:
-        return
-      }
-    }
-  }
+//  func refreshPurchasedProducts() async {
+//    for await verificationResult in Transaction.currentEntitlements {
+//      switch verificationResult {
+//      case let .verified(trans):
+//        return
+//      case .unverified:
+//        return
+//      }
+//    }
+//  }
 }
