@@ -17,17 +17,57 @@ struct ProfileView: View {
     if subscriptionStatusIsLoading {
       ProgressView()
     } else {
-      VStack {
-        switch subscriptionStatus {
-        case .notSubscribed: Text("Not Subscribed")
-        case .ticketsBronze: Text("ticketsBronze")
-        case .ticketsSilver: Text("ticketsSilver")
-        case .ticketsGold: Text("ticketsGold")
+      NavigationStack {
+        VStack(alignment: .leading, spacing: 20) {
+          switch subscriptionStatus {
+          case .notSubscribed: Text("Not Subscribed")
+          case .ticketsBronze:
+            ProfileSubscriptionBadgeView(
+              title: "Meetup Tickets Bronze",
+              color: Color.brown
+            )
+          case .ticketsSilver:
+            ProfileSubscriptionBadgeView(
+              title: "Meetup Tickets Silver",
+              color: Color.gray
+            )
+          case .ticketsGold:
+            ProfileSubscriptionBadgeView(
+              title: "Meetup Tickets Gold",
+              color: Color.yellow
+            )
+          }
+          VStack {
+            Text("❤️ x\(purchaseManager.profileHeartEmojiQuantity)")
+            Text("☀️ x\(purchaseManager.profileSunEmojiQuantity)")
+          }
+          Spacer()
         }
-        Text("Heart emojis: \(purchaseManager.profileHeartEmojiQuantity)")
-        Text("Sun emojis: \(purchaseManager.profileSunEmojiQuantity)")
+        .navigationTitle("Profile")
       }
     }
+  }
+}
+
+struct ProfileSubscriptionBadgeView: View {
+  let title: String
+  let color: Color
+
+  var body: some View {
+    HStack {
+      Image(systemName: "ticket")
+        .foregroundStyle(color)
+        .font(.system(size: 60))
+        .bold()
+      Text(title)
+        .foregroundStyle(color)
+        .font(.title)
+        .bold()
+    }
+    .padding()
+    .background(Color.gray.opacity(0.4))
+    .cornerRadius(20)
+    .shadow(color: Color.white.opacity(0.2), radius: 4)
   }
 }
 
