@@ -15,7 +15,7 @@
 		5789B2262BE2E28700294392 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2252BE2E28700294392 /* EnvironmentValues+Extension.swift */; };
 		5789B2282BE2E2C000294392 /* SubscriptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */; };
 		5789B22A2BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789B2292BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift */; };
-		57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFA2BDD30BC00294392 /* StoreView.swift */; };
+		57B60CFB2BDD30BC00294392 /* CocoaStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFA2BDD30BC00294392 /* CocoaStoreView.swift */; };
 		57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */; };
 		57B60D012BDD327A00294392 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D002BDD327A00294392 /* ProfileView.swift */; };
 		57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */; };
@@ -37,7 +37,7 @@
 		5789B2252BE2E28700294392 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStatus.swift; sourceTree = "<group>"; };
 		5789B2292BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStatusTaskViewModifier.swift; sourceTree = "<group>"; };
-		57B60CFA2BDD30BC00294392 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		57B60CFA2BDD30BC00294392 /* CocoaStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaStoreView.swift; sourceTree = "<group>"; };
 		57B60CFE2BDD31CC00294392 /* LiveOnStageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveOnStageView.swift; sourceTree = "<group>"; };
 		57B60D002BDD327A00294392 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRenewableSubscriptionStoreView.swift; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
 				57DFDBB42BE274D800294392 /* PurchaseManager.swift */,
 				57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */,
-				5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */,
 				5789B2292BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift */,
 			);
 			path = Store;
@@ -123,7 +122,7 @@
 		57B60D052BDD41EF00294392 /* StoreViews */ = {
 			isa = PBXGroup;
 			children = (
-				57B60CFA2BDD30BC00294392 /* StoreView.swift */,
+				57B60CFA2BDD30BC00294392 /* CocoaStoreView.swift */,
 				57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */,
 				57B60D062BDD427700294392 /* ConsumablesStoreView.swift */,
 			);
@@ -144,6 +143,7 @@
 			children = (
 				57DFDBC02BE2782C00294392 /* ProductID.swift */,
 				5789B2232BE2E17100294392 /* SubscriptionIdentifiers.swift */,
+				5789B2272BE2E2C000294392 /* SubscriptionStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 				5789B22A2BE2E4CF00294392 /* SubscriptionStatusTaskViewModifier.swift in Sources */,
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
 				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
-				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
+				57B60CFB2BDD30BC00294392 /* CocoaStoreView.swift in Sources */,
 				5789B2262BE2E28700294392 /* EnvironmentValues+Extension.swift in Sources */,
 				57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */,
 				57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */,

@@ -15,9 +15,12 @@ struct ConsumablesStoreView: View {
   ]
 
   var body: some View {
-    ForEach(productIDs, id: \.self) { productID in
-      ProductView(id: productID)
+    ScrollView {
+      StoreView(ids: productIDs)
+        .productViewStyle(.compact)
+        .storeButton(.hidden, for: .cancellation)
     }
+    .navigationTitle("Consumables")
   }
 }
 

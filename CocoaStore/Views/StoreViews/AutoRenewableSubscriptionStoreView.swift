@@ -10,11 +10,38 @@ import SwiftUI
 
 struct AutoRenewableSubscriptionStoreView: View {
   @Environment(\.subscriptionIDs.group) private var subscriptionGroupID
+  @Environment(\.dismiss) private var dismiss
 
   var body: some View {
-    ScrollView {
-      SubscriptionStoreView(groupID: subscriptionGroupID)
-        .storeButton(.hidden, for: .cancellation)
+    SubscriptionStoreView(groupID: subscriptionGroupID) {
+      VStack {
+        Image("cocoaheadsHamburgLogo")
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+          .clipShape(RoundedRectangle(cornerRadius: 20))
+          .frame(width: 200)
+        VStack(spacing: 3) {
+          Text("CocoaHeads Meetup Tickets")
+            .fixedSize(horizontal: false, vertical: true)
+            .font(.largeTitle.bold())
+            .foregroundStyle(Color.black)
+            .multilineTextAlignment(.center)
+          Text("Subscription to get free access to various CocoaHeads Meetups")
+            .fixedSize(horizontal: false, vertical: true)
+            .font(.title3.weight(.medium))
+            .padding([.bottom, .horizontal])
+            .foregroundStyle(.gray)
+            .multilineTextAlignment(.center)
+        }
+      }
+      .padding(.vertical)
+      .padding(.top, 40)
+      .containerBackground(Color.white, for: .subscriptionStoreHeader)
+      .containerBackground(Color.red, for: .subscriptionStoreFullHeight)
+    }
+    .storeButton(.visible, for: .cancellation)
+    .onInAppPurchaseCompletion { _, _ in
+      dismiss()
     }
   }
 }

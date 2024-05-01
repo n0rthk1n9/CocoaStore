@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "cocoaheads_hamburg_logo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

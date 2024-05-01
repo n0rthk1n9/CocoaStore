@@ -1,5 +1,5 @@
 //
-//  StoreView.swift
+//  CocoaStoreView.swift
 //  CocoaStore
 //
 //  Created by Jan Armbrust on 27.04.24.
@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct StoreView: View {
+struct CocoaStoreView: View {
+  @State private var isShowingSubscriptionStoreViewSheet = false
+
   var body: some View {
     NavigationStack {
       List {
         Section {
-          NavigationLink("CocoaHeads Meetup Tickets Subscriptions") {
-            AutoRenewableSubscriptionStoreView()
+          Button("CocoaHeads Meetup Tickets Subscriptions") {
+            isShowingSubscriptionStoreViewSheet.toggle()
           }
         } header: {
           Label("Subscriptions (Auto-Renewable)", systemImage: "ticket")
@@ -27,10 +29,13 @@ struct StoreView: View {
         }
       }
       .navigationTitle("CocoaStore")
+      .sheet(isPresented: $isShowingSubscriptionStoreViewSheet) {
+        AutoRenewableSubscriptionStoreView()
+      }
     }
   }
 }
 
 #Preview {
-  StoreView()
+  CocoaStoreView()
 }
