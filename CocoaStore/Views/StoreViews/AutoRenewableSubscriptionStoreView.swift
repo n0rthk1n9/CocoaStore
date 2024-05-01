@@ -9,7 +9,7 @@ import StoreKit
 import SwiftUI
 
 struct AutoRenewableSubscriptionStoreView: View {
-  @State private var subscriptionGroupID = "EC985ED4"
+  @State private var subscriptionGroupID = SubscriptionGroupID.meetupTicketsSubscription.rawValue
 
   var body: some View {
     ScrollView {

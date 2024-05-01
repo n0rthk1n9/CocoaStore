@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ConsumablesStoreView: View {
   @State private var productIDs = [
-    "dev.xbow.CocoaStore.profileSunEmoji",
-    "dev.xbow.CocoaStore.profileHeartEmoji"
+    ProductID.profileHeartEmoji.rawValue,
+    ProductID.profileSunEmoji.rawValue
   ]
 
   var body: some View {

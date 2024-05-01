@@ -19,11 +19,6 @@ struct StoreView: View {
           Label("Subscriptions (Auto-Renewable)", systemImage: "ticket")
         }
         Section {
-          Text("Subscriptions (Non-Renewing)")
-        } header: {
-          Label("Subscriptions (Non-Renewing)", systemImage: "ticket")
-        }
-        Section {
           NavigationLink("Profile Pic Decoration") {
             ConsumablesStoreView()
           }
