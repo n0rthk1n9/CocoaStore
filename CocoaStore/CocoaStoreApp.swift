@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CocoaStoreApp: App {
-    var body: some Scene {
-        WindowGroup {
-            MainView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      MainView()
+        .cocoaStore()
     }
+  }
 }

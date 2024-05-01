@@ -17,6 +17,8 @@
 		57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */; };
 		57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B60D062BDD427700294392 /* ConsumablesStoreView.swift */; };
 		57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB42BE274D800294392 /* PurchaseManager.swift */; };
+		57DFDBB72BE2759300294392 /* CocoaStoreViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */; };
+		57DFDBBA2BE275E500294392 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFDBB92BE275E500294392 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		57B60D032BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRenewableSubscriptionStoreView.swift; sourceTree = "<group>"; };
 		57B60D062BDD427700294392 /* ConsumablesStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumablesStoreView.swift; sourceTree = "<group>"; };
 		57DFDBB42BE274D800294392 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaStoreViewModifier.swift; sourceTree = "<group>"; };
+		57DFDBB92BE275E500294392 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			children = (
 				570FA4ED2BD83E9A00294392 /* CocoaStoreApp.swift */,
 				57B60CFD2BDD30CA00294392 /* Views */,
+				57DFDBB82BE275D100294392 /* Extension */,
 				57B60D022BDD386700294392 /* Store */,
 				570FA4F12BD83E9C00294392 /* Assets.xcassets */,
 				570FA4F32BD83E9C00294392 /* Preview Content */,
@@ -97,6 +102,7 @@
 			children = (
 				570FA4FB2BD83FAA00294392 /* CocoaStoreStoreKitConfiguration.storekit */,
 				57DFDBB42BE274D800294392 /* PurchaseManager.swift */,
+				57DFDBB62BE2759300294392 /* CocoaStoreViewModifier.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -109,6 +115,14 @@
 				57B60D062BDD427700294392 /* ConsumablesStoreView.swift */,
 			);
 			path = StoreViews;
+			sourceTree = "<group>";
+		};
+		57DFDBB82BE275D100294392 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				57DFDBB92BE275E500294392 /* View+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +197,14 @@
 			files = (
 				57B60CFF2BDD31CC00294392 /* LiveOnStageView.swift in Sources */,
 				57B60D072BDD427700294392 /* ConsumablesStoreView.swift in Sources */,
+				57DFDBBA2BE275E500294392 /* View+Extension.swift in Sources */,
 				570FA4F02BD83E9A00294392 /* MainView.swift in Sources */,
 				57B60D012BDD327A00294392 /* ProfileView.swift in Sources */,
 				57B60CFB2BDD30BC00294392 /* StoreView.swift in Sources */,
 				57B60D042BDD41EA00294392 /* AutoRenewableSubscriptionStoreView.swift in Sources */,
 				57DFDBB52BE274D800294392 /* PurchaseManager.swift in Sources */,
 				570FA4EE2BD83E9A00294392 /* CocoaStoreApp.swift in Sources */,
+				57DFDBB72BE2759300294392 /* CocoaStoreViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
