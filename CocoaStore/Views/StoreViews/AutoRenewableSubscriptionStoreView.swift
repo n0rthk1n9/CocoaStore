@@ -19,7 +19,7 @@ struct AutoRenewableSubscriptionStoreView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .clipShape(RoundedRectangle(cornerRadius: 20))
-          .frame(width: 200)
+          .frame(height: 150)
         VStack(spacing: 3) {
           Text("CocoaHeads Meetup Tickets")
             .fixedSize(horizontal: false, vertical: true)
