@@ -106,15 +106,4 @@ class PurchaseManager: ObservableObject {
       }
     }
   }
-
-//  func refreshPurchasedProducts() async {
-//    for await verificationResult in Transaction.currentEntitlements {
-//      switch verificationResult {
-//      case let .verified(trans):
-//        return
-//      case .unverified:
-//        return
-//      }
-//    }
-//  }
 }
