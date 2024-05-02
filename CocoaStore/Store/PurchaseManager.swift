@@ -45,9 +45,13 @@ class PurchaseManager: ObservableObject {
       } else {
         switch transaction.productID {
         case ProductID.profileHeartEmoji.rawValue:
-          profileHeartEmojiQuantity -= transaction.purchasedQuantity
+          Task { @MainActor in
+            profileHeartEmojiQuantity -= transaction.purchasedQuantity
+          }
         case ProductID.profileSunEmoji.rawValue:
-          profileSunEmojiQuantity -= transaction.purchasedQuantity
+          Task { @MainActor in
+            profileSunEmojiQuantity -= transaction.purchasedQuantity
+          }
         default:
           return
         }
