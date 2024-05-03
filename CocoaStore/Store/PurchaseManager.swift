@@ -10,6 +10,7 @@ import StoreKit
 class PurchaseManager: ObservableObject {
   @Published var profileHeartEmojiQuantity = 0
   @Published var profileSunEmojiQuantity = 0
+  @Published var isMeetupPictureCustomer = false
 
   private var updatesTask: Task<Void, Never>?
 
@@ -57,6 +58,9 @@ class PurchaseManager: ObservableObject {
         }
       }
     } else {
+      Task { @MainActor in
+        isMeetupPictureCustomer = true
+      }
       await transaction.finish()
     }
   }
@@ -103,6 +107,17 @@ class PurchaseManager: ObservableObject {
       for await update in Transaction.updates {
         guard let self else { break }
         await self.process(transaction: update)
+      }
+    }
+  }
+
+  func refreshPurchasedProducts() async {
+    for await verificationResult in Transaction.currentEntitlements {
+      switch verificationResult {
+      case .verified:
+        await process(transaction: verificationResult)
+      case .unverified:
+        return
       }
     }
   }

@@ -16,6 +16,7 @@ struct CocoaStoreViewModifier: ViewModifier {
     .task {
       PurchaseManager.shared.observeTransactionUpdates()
       await PurchaseManager.shared.checkForUnfinishedTransactions()
+      await PurchaseManager.shared.refreshPurchasedProducts()
     }
   }
 }

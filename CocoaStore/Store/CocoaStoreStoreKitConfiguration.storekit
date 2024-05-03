@@ -33,6 +33,21 @@
       "productID" : "dev.xbow.CocoaStore.profileSunEmoji",
       "referenceName" : "Profile Sun Emoji",
       "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "200.99",
+      "familyShareable" : false,
+      "internalID" : "8C02B4BA",
+      "localizations" : [
+        {
+          "description" : "Unlock the CocoaHeads Hamburg Meetup 🤳 ",
+          "displayName" : "Meetup Picture",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "dev.xbow.CocoaStore.picture",
+      "referenceName" : "CocoaHeads Hamburg Meetup Picture",
+      "type" : "NonConsumable"
     }
   ],
   "settings" : {
