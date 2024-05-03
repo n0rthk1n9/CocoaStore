@@ -14,7 +14,7 @@ struct LiveOnStageView: View {
 
   var body: some View {
     ZStack {
-      Image("cocoaheadsHamburgLogo")
+      Image("meetup")
         .resizable()
         .aspectRatio(contentMode: .fit)
         .clipShape(RoundedRectangle(cornerRadius: 20))
